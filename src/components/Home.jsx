@@ -2,8 +2,8 @@ import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useSpring, animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
-import awsLogo from "./assets/aws-logo.png";
-import maitLogo from "./assets/Mait-logo.png";
+import awsLogo from "../assets/aws-logo.png";
+import maitLogo from "../assets/Mait-logo.png";
 
 const Home = () => {
   const scaleAnim = useSpring({ scale: 1, from: { scale: 0.9 }, config: { tension: 300, friction: 25 } });
