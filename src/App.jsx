@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import Home from "./components/Home";
 import AboutAWS from "./components/AboutAWS";
 import AboutMAIT from "./components/AboutMAIT";
 import Contact from "./components/Contact";
@@ -59,10 +60,10 @@ const App = () => {
         {/* Routes */}
         <main className="p-6">
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/about-aws" element={<AboutAWS />} />
             <Route path="/about-mait" element={<AboutMAIT />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/" element={<Home />} />
           </Routes>
         </main>
       </div>
