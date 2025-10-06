@@ -22,16 +22,28 @@ const Home = () => {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-300/20 rounded-full translate-x-1/3 translate-y-1/3 animate-pulse"></div>
 
       {/* Logos Section */}
-      <animated.div
-        style={scaleAnim}
-        className="flex items-center gap-8 mt-20 p-6 bg-white/30 backdrop-blur-md rounded-2xl shadow-2xl cursor-pointer hover:scale-105 transition-transform duration-300"
-        onMouseEnter={() => scaleAnim.start({ scale: 1.05 })}
-        onMouseLeave={() => scaleAnim.start({ scale: 1 })}
-      >
-        <img src={awsLogo} alt="AWS Logo" className="h-16 sm:h-20" />
-        <span className="text-7xl font-extrabold text-orange-500 font-mono select-none">×</span>
-        <img src={maitLogo} alt="MAIT Logo" className="h-16 sm:h-20" />
-      </animated.div>
+     <motion.div
+  role="button"
+  tabIndex={0}
+  className="group flex items-center gap-8 mt-20 p-6 rounded-2xl cursor-pointer
+             bg-white/40 backdrop-blur-md shadow-xl ring-1 ring-black/5
+             hover:shadow-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500/60
+             transition-colors duration-300"
+  whileHover={{ scale: 1.04 }}
+  whileTap={{ scale: 0.98 }}
+  transition={{ type: "spring", stiffness: 320, damping: 22 }}
+>
+  <img src={awsLogo} alt="AWS logo" className="h-16 sm:h-20 object-contain" />
+  <span
+  className="text-6xl sm:text-7xl font-extrabold font-mono select-none leading-none
+             bg-gradient-to-r from-blue-900 via-blue-600 to-orange-500
+             bg-clip-text text-transparent cursor-pointer transition-all duration-300
+             hover:from-orange-500 hover:via-orange-400 hover:to-blue-700"
+>
+    ⇄
+  </span>
+  <img src={maitLogo} alt="MAIT logo" className="h-16 sm:h-20 object-contain" />
+</motion.div>
 
       {/* Hero Content */}
       <motion.div

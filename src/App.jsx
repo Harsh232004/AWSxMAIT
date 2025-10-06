@@ -16,7 +16,7 @@ const App = () => {
           {/* Logo section Left */}
           <div className="flex items-center gap-2">
             <img src={awsLogo} alt="AWS" className="h-10 sm:h-12" />
-            <span className="text-2xl font-semibold text-orange-400">×</span>
+            <span className="text-2xl font-semibold text-orange-400">⇄</span>
             <img src={maitLogo} alt="MAIT" className="h-10 sm:h-12" />
           </div>
           {/* Nav links Right */}
